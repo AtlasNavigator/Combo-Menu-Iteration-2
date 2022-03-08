@@ -2,9 +2,10 @@ const readLine = require('readline-sync');
 
 let totalCost = 0;
 let beverage = 0;
+let fries = 0;
 let order = []; //Begin the tally 
 
-let sandwich = readLine.question('Which type of sandwich would you like? \nChicken - $5.25 \nBeef - $6.25 \nTofu - $5.75 \nEnter your selection here: ').toLowerCase();
+let sandwich = readLine.question('What type of patty would you like on your sandwich? \nChicken - $5.25 \nBeef - $6.25 \nTofu - $5.75 \nEnter your selection here: ').toLowerCase();
 order.push(sandwich);
 console.log(`You have selected a ${sandwich} sandwich.\n`); //Show sandwich selection
 
@@ -120,7 +121,7 @@ if (order.length === 4 && friesCheck === true) {
   console.log(`\nYou have ordered a ${order[0]} sandwich and ${order[1]} fries. You have also requested ${order[3]} ${order[2]} packets.`);
 }
 if (order.length === 5) {
-  console.log(`\nYou have ordered a ${order[0]} sandwich, a ${order[1]} beverage, and ${order[2]} fries. You have also requested ${order[4]} ${order[3]} packets.`);
+  console.log(`\nYou have ordered a ${order[0]} sandwich, a ${order[1]} beverage, and ${order[2]} fries.\n You have also requested ${order[4]} ${order[3]} packets.`);
 } //Show what was ordered
 
 finalCost = totalCost * 1.07; //Calculate with tax
